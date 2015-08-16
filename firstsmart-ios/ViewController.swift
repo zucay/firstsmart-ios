@@ -21,7 +21,9 @@ class ViewController: UIViewController {
             
             self.socket.onConnect = {() in
                 println("connected")
-                self.socket.emit("message init", args: [])
+                
+                self.socket.emit("joinRoom", args: ["myroom"])
+                self.socket.emit("msg", args: ["hoge"])
             }
             
         })
