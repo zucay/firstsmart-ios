@@ -11,6 +11,7 @@ import SIOSocket
 
 class ViewController: UIViewController {
     var socket:SIOSocket! = nil
+    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class ViewController: UIViewController {
             self.socket.on("msg", callback: {(data:[AnyObject]!)  in
                 let url = data[0] as? String
                 println(url!)
+                self.webView.loadRequest(NSURLRequest(URL: NSURL(string: url!)!))
             })
             
             
