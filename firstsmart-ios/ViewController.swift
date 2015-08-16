@@ -23,8 +23,18 @@ class ViewController: UIViewController {
                 println("connected")
                 
                 self.socket.emit("joinRoom", args: ["myroom"])
-                self.socket.emit("msg", args: ["hoge"])
+                // self.socket.emit("msg", args: ["hoge"])
             }
+            
+            self.socket.onDisconnect = {() in
+                println("disconnected")
+            }
+            
+            self.socket.on("msg", callback: {(data:[AnyObject]!)  in
+                let url = data[0] as? String
+                println(url!)
+            })
+            
             
         })
         
