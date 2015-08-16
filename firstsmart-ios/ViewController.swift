@@ -7,12 +7,25 @@
 //
 
 import UIKit
+import SIOSocket
 
 class ViewController: UIViewController {
-
+    var socket:SIOSocket! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        SIOSocket.socketWithHost("wss://firstsmart-nodejs.herokuapp.com/", response:  { (_socket: SIOSocket!) in
+            self.socket = _socket
+            
+            
+            self.socket.onConnect = {() in
+                println("connected")
+                self.socket.emit("message init", args: [])
+            }
+            
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
