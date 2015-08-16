@@ -13,6 +13,7 @@
 		B378CC591B6FC0B100BC87BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B378CC581B6FC0B100BC87BC /* Images.xcassets */; };
 		B378CC5C1B6FC0B100BC87BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B378CC5A1B6FC0B100BC87BC /* LaunchScreen.xib */; };
 		B378CC681B6FC0B100BC87BC /* firstsmart_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378CC671B6FC0B100BC87BC /* firstsmart_iosTests.swift */; };
+		C595FB67845B75AF47F0256A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CD5F9BCEB0DB67EFFCE1E0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		693AD4C7B0F2CB1712E7300C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B378CC4C1B6FC0B100BC87BC /* firstsmart-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "firstsmart-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B378CC501B6FC0B100BC87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B378CC511B6FC0B100BC87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		B378CC611B6FC0B100BC87BC /* firstsmart-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "firstsmart-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B378CC661B6FC0B100BC87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B378CC671B6FC0B100BC87BC /* firstsmart_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstsmart_iosTests.swift; sourceTree = "<group>"; };
+		CC4B0ED04A88B87F98C9DBD3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F9CD5F9BCEB0DB67EFFCE1E0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C595FB67845B75AF47F0256A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4632E714012A2DEA2E398DAE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				693AD4C7B0F2CB1712E7300C /* Pods.debug.xcconfig */,
+				CC4B0ED04A88B87F98C9DBD3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B378CC431B6FC0B100BC87BC = {
 			isa = PBXGroup;
 			children = (
 				B378CC4E1B6FC0B100BC87BC /* firstsmart-ios */,
 				B378CC641B6FC0B100BC87BC /* firstsmart-iosTests */,
 				B378CC4D1B6FC0B100BC87BC /* Products */,
+				4632E714012A2DEA2E398DAE /* Pods */,
+				C46EF7CFB06467FA32C62D6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +128,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C46EF7CFB06467FA32C62D6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9CD5F9BCEB0DB67EFFCE1E0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B378CC6B1B6FC0B100BC87BC /* Build configuration list for PBXNativeTarget "firstsmart-ios" */;
 			buildPhases = (
+				AEACE70FDDFB42E0D2BF3BDD /* Check Pods Manifest.lock */,
 				B378CC481B6FC0B100BC87BC /* Sources */,
 				B378CC491B6FC0B100BC87BC /* Frameworks */,
 				B378CC4A1B6FC0B100BC87BC /* Resources */,
+				C8B1762821138405AB78D5AA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +232,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEACE70FDDFB42E0D2BF3BDD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B1762821138405AB78D5AA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B378CC481B6FC0B100BC87BC /* Sources */ = {
@@ -340,6 +399,7 @@
 		};
 		B378CC6C1B6FC0B100BC87BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 693AD4C7B0F2CB1712E7300C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "firstsmart-ios/Info.plist";
@@ -350,6 +410,7 @@
 		};
 		B378CC6D1B6FC0B100BC87BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4B0ED04A88B87F98C9DBD3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "firstsmart-ios/Info.plist";
@@ -411,6 +472,7 @@
 				B378CC6D1B6FC0B100BC87BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B378CC6E1B6FC0B100BC87BC /* Build configuration list for PBXNativeTarget "firstsmart-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +481,7 @@
 				B378CC701B6FC0B100BC87BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
