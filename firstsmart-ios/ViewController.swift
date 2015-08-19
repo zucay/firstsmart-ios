@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         correctWebViewFrame()
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     private func correctWebViewFrame() {
         self.webView.frame = UIScreen.mainScreen().bounds
         self.webView.center = self.view.center
