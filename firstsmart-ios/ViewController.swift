@@ -39,13 +39,6 @@ class ViewController: UIViewController {
                 self.webView.frame = UIScreen.mainScreen().bounds
                 self.webView.center = self.view.center
                 
-                
-                let userAgent:String! = self.webView.stringByEvaluatingJavaScriptFromString("navigator.userAgent")
-                let customUserAgent:String = userAgent.stringByAppendingString(self.safariUASuffix)
-                let dic:NSDictionary = ["UserAgent":customUserAgent]
-                NSUserDefaults.standardUserDefaults().registerDefaults(dic as [NSObject:AnyObject])
-                
-                
                 self.webView.loadRequest(NSURLRequest(URL: NSURL(string: url!)!))
             })
             
