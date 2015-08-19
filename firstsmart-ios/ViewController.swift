@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        webViewInit()
         socketInit()
     }
 
@@ -26,7 +25,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func webViewInit() {
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        correctWebViewFrame()
+    }
+    
+    private func correctWebViewFrame() {
         self.webView.frame = UIScreen.mainScreen().bounds
         self.webView.center = self.view.center
     }
@@ -37,7 +40,6 @@ class ViewController: UIViewController {
             
             self.socket.onConnect = {() in
                 println("connected")
-                
                 self.socket.emit("joinRoom", args: ["myroom"])
             }
             
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
             self.socket.on("msg", callback: {(data:[AnyObject]!)  in
                 let url = data[0] as? String
                 println(url!)
-                
+                self.correctWebViewFrame()
                 self.webView.loadRequest(NSURLRequest(URL: NSURL(string: url!)!))
             })
         })
