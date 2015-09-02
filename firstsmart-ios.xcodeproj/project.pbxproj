@@ -14,6 +14,7 @@
 		B378CC591B6FC0B100BC87BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B378CC581B6FC0B100BC87BC /* Images.xcassets */; };
 		B378CC5C1B6FC0B100BC87BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B378CC5A1B6FC0B100BC87BC /* LaunchScreen.xib */; };
 		B378CC681B6FC0B100BC87BC /* firstsmart_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378CC671B6FC0B100BC87BC /* firstsmart_iosTests.swift */; };
+		B3C8BD0B1B9714A2000FB6DA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C8BD0A1B9714A2000FB6DA /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		B378CC611B6FC0B100BC87BC /* firstsmart-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "firstsmart-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B378CC661B6FC0B100BC87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B378CC671B6FC0B100BC87BC /* firstsmart_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstsmart_iosTests.swift; sourceTree = "<group>"; };
+		B3C8BD0A1B9714A2000FB6DA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CC4B0ED04A88B87F98C9DBD3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				B378CC511B6FC0B100BC87BC /* AppDelegate.swift */,
 				B378CC531B6FC0B100BC87BC /* ViewController.swift */,
+				B3C8BD0A1B9714A2000FB6DA /* MenuViewController.swift */,
 				B378CC551B6FC0B100BC87BC /* Main.storyboard */,
 				B378CC581B6FC0B100BC87BC /* Images.xcassets */,
 				B378CC5A1B6FC0B100BC87BC /* LaunchScreen.xib */,
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B378CC541B6FC0B100BC87BC /* ViewController.swift in Sources */,
+				B3C8BD0B1B9714A2000FB6DA /* MenuViewController.swift in Sources */,
 				B378CC521B6FC0B100BC87BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

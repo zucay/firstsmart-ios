@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         appDelegate.slidingViewController?.underLeftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
         
         self.view.addGestureRecognizer(appDelegate.slidingViewController!.panGesture)
-        appDelegate.slidingViewController?.anchorRightPeekAmount = 100.0 // スライド時にTOPが見えてる範囲
+        appDelegate.slidingViewController?.anchorRightPeekAmount = 50.0 // スライド時にTOPが見えてる範囲
         
     }
     
