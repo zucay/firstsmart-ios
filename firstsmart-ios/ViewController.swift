@@ -32,6 +32,23 @@ class ViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    override func viewWillAppear(animated: Bool) {
+        
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        //シャドウの設定
+        self.view.layer.shadowOpacity = 0.5
+        self.view.layer.shadowRadius = 5.0
+        self.view.layer.shadowColor = UIColor.grayColor().CGColor
+        
+        // MenuViewControllerを取得して、ECSlidingViewControllerのunderLeftViewController に設定
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        appDelegate.slidingViewController?.underLeftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
+        
+        self.view.addGestureRecognizer(appDelegate.slidingViewController!.panGesture)
+        appDelegate.slidingViewController?.anchorRightPeekAmount = 100.0 // スライド時にTOPが見えてる範囲
+        
+    }
     
     private func correctWebViewFrame() {
         self.webView.frame = UIScreen.mainScreen().bounds
