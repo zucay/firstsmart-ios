@@ -21,7 +21,7 @@ class MenuViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        print(textField.text)
+        print(textField.text, terminator: "")
     }
 }
 

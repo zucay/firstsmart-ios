@@ -189,6 +189,8 @@
 		B378CC441B6FC0B100BC87BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = zuka;
 				TargetAttributes = {

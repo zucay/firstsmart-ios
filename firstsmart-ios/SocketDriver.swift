@@ -16,7 +16,7 @@ class SocketDriver : NSObject
     
     init(roomName: String) {
         super.init()
-        socketInit()
+        socketInit(roomName)
     }
     
     func onURLChange(callback:(String) -> Void) {
