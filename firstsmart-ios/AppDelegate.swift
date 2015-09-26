@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.slidingViewController = self.window!.rootViewController as? ECSlidingViewController
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        self.slidingViewController!.topViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Top") as! UIViewController
+        self.slidingViewController!.topViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Top")
         
         return true
     }

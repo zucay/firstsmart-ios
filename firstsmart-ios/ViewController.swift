@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         //シャドウの設定
         self.view.layer.shadowOpacity = 0.5
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         
         // MenuViewControllerを取得して、ECSlidingViewControllerのunderLeftViewController に設定
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        appDelegate.slidingViewController?.underLeftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
+        appDelegate.slidingViewController?.underLeftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu")
         
         self.view.addGestureRecognizer(appDelegate.slidingViewController!.panGesture)
         appDelegate.slidingViewController?.anchorRightPeekAmount = 50.0 // スライド時にTOPが見えてる範囲
@@ -60,22 +60,22 @@ class ViewController: UIViewController {
             self.socket = _socket
             
             self.socket.onConnect = {() in
-                println("connected")
+                print("connected")
                 self.socket.emit("joinRoom", args: ["myroom"])
             }
             
             self.socket.onReconnect = {(attempts: Int) in
-                println("re-connected")
+                print("re-connected")
             }
             
             self.socket.onDisconnect = {() in
-                println("disconnected")
+                print("disconnected")
                 
             }
             
             self.socket.on("msg", callback: {(data:[AnyObject]!)  in
                 let url = data[0] as? String
-                println(url!)
+                print(url!)
                 self.correctWebViewFrame()
                 self.webView.loadRequest(NSURLRequest(URL: NSURL(string: url!)!))
             })
