@@ -7,17 +7,21 @@
 //
 
 import UIKit
-import SIOSocket
+
 
 class ViewController: UIViewController {
-    var socket:SIOSocket! = nil
+
     @IBOutlet weak var webView: UIWebView!
     let safariUASuffix = " Safari/600.1.4 "
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        socketInit()
+        let socket = SocketDriver(roomName: "myroom")
+        socket.onURLChange({ (url: String) -> Void in
+            self.correctWebViewFrame()
+            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,32 +59,6 @@ class ViewController: UIViewController {
         self.webView.center = self.view.center
     }
     
-    private func socketInit() {
-        SIOSocket.socketWithHost("wss://firstsmart-nodejs.herokuapp.com/", reconnectAutomatically: true, attemptLimit: 10, withDelay: 3, maximumDelay: 120, timeout: 10, response:  { (_socket: SIOSocket!) in
-            self.socket = _socket
-            
-            self.socket.onConnect = {() in
-                print("connected")
-                self.socket.emit("joinRoom", args: ["myroom"])
-            }
-            
-            self.socket.onReconnect = {(attempts: Int) in
-                print("re-connected")
-            }
-            
-            self.socket.onDisconnect = {() in
-                print("disconnected")
-                
-            }
-            
-            self.socket.on("msg", callback: {(data:[AnyObject]!)  in
-                let url = data[0] as? String
-                print(url!)
-                self.correctWebViewFrame()
-                self.webView.loadRequest(NSURLRequest(URL: NSURL(string: url!)!))
-            })
-        })
-    }
     
 
 
