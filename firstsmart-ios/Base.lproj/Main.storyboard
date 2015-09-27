@@ -77,13 +77,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="connection token" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiF-g5-kd8">
-                                <rect key="frame" x="20" y="95" width="133" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connection token" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiF-g5-kd8">
+                                <rect key="frame" x="18" y="95" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-tC-TYk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQe-tC-TYk">
                                 <rect key="frame" x="18" y="124" width="564" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -111,21 +111,50 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tm3-XU-CmV">
-                                <rect key="frame" x="284" y="480" width="32" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="save"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tm3-XU-CmV" customClass="ButtonCustom" customModule="firstsmart_ios" customModuleProvider="target">
+                                <rect key="frame" x="18" y="502" width="551" height="34"/>
+                                <color key="backgroundColor" red="0.1455914559" green="0.58712402689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1619756852" green="0.58073281450000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※ Chrome Extensionの設定欄に記載されています" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNk-aD-fbN">
+                                <rect key="frame" x="20" y="155" width="564" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Zya-sQ-TAs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fNk-aD-fbN" firstAttribute="top" secondItem="DQe-tC-TYk" secondAttribute="bottom" constant="1" id="42c-qn-srG"/>
                             <constraint firstItem="Fmo-87-9Vr" firstAttribute="top" secondItem="Lt6-Rf-MS7" secondAttribute="bottom" id="6g6-s6-JmJ"/>
+                            <constraint firstItem="fNk-aD-fbN" firstAttribute="leading" secondItem="pSy-Og-JrH" secondAttribute="leadingMargin" id="B0S-gR-YNb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DQe-tC-TYk" secondAttribute="trailing" constant="-2" id="HHe-JD-2Hi"/>
                             <constraint firstItem="3LI-ig-Xte" firstAttribute="leading" secondItem="pSy-Og-JrH" secondAttribute="leadingMargin" constant="-20" id="MHa-yM-ugL"/>
+                            <constraint firstItem="kiF-g5-kd8" firstAttribute="leading" secondItem="DQe-tC-TYk" secondAttribute="leading" id="WBW-A9-Bsn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3LI-ig-Xte" secondAttribute="trailing" constant="-20" id="dfv-i6-0bS"/>
+                            <constraint firstItem="kiF-g5-kd8" firstAttribute="top" secondItem="pSy-Og-JrH" secondAttribute="top" constant="95" id="fdP-td-yVZ"/>
+                            <constraint firstItem="DQe-tC-TYk" firstAttribute="top" secondItem="kiF-g5-kd8" secondAttribute="bottom" constant="8" symbolic="YES" id="hk0-Aa-Rdc"/>
+                            <constraint firstItem="tm3-XU-CmV" firstAttribute="leading" secondItem="DQe-tC-TYk" secondAttribute="leading" id="igf-vR-FcB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DQe-tC-TYk" secondAttribute="trailing" constant="-2" id="k3t-8R-lST"/>
                             <constraint firstItem="DQe-tC-TYk" firstAttribute="leading" secondItem="pSy-Og-JrH" secondAttribute="leadingMargin" constant="-2" id="krs-Ad-cSy"/>
+                            <constraint firstItem="Lt6-Rf-MS7" firstAttribute="top" secondItem="tm3-XU-CmV" secondAttribute="bottom" constant="20" id="n09-wg-9Yn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tm3-XU-CmV" secondAttribute="trailing" constant="11" id="rKW-g7-Hxc"/>
                             <constraint firstItem="DQe-tC-TYk" firstAttribute="leading" secondItem="pSy-Og-JrH" secondAttribute="leadingMargin" constant="-2" id="vw0-CX-9CF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fNk-aD-fbN" secondAttribute="trailing" constant="-4" id="zHM-ji-xgi"/>
                         </constraints>
                     </view>
                     <connections>

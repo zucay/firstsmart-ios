@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8494F3ED5C1BB7DF8CF27B6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DDB68D198D0C3418FCBEC2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B35746101BB7D7DE00B9E333 /* ButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B357460F1BB7D7DE00B9E333 /* ButtonCustom.swift */; settings = {ASSET_TAGS = (); }; };
 		B378CC521B6FC0B100BC87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378CC511B6FC0B100BC87BC /* AppDelegate.swift */; };
 		B378CC541B6FC0B100BC87BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378CC531B6FC0B100BC87BC /* ViewController.swift */; };
 		B378CC571B6FC0B100BC87BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B378CC551B6FC0B100BC87BC /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		693AD4C7B0F2CB1712E7300C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		92DDB68D198D0C3418FCBEC2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B357460F1BB7D7DE00B9E333 /* ButtonCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCustom.swift; sourceTree = "<group>"; };
 		B378CC4C1B6FC0B100BC87BC /* firstsmart-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "firstsmart-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B378CC501B6FC0B100BC87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B378CC511B6FC0B100BC87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				B378CC5A1B6FC0B100BC87BC /* LaunchScreen.xib */,
 				B378CC4F1B6FC0B100BC87BC /* Supporting Files */,
 				B3C5AE2B1BB6813100E93E2B /* SocketDriver.swift */,
+				B357460F1BB7D7DE00B9E333 /* ButtonCustom.swift */,
 			);
 			path = "firstsmart-ios";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				B378CC541B6FC0B100BC87BC /* ViewController.swift in Sources */,
 				B3C8BD0B1B9714A2000FB6DA /* MenuViewController.swift in Sources */,
 				B3C5AE2C1BB6813100E93E2B /* SocketDriver.swift in Sources */,
+				B35746101BB7D7DE00B9E333 /* ButtonCustom.swift in Sources */,
 				B378CC521B6FC0B100BC87BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
